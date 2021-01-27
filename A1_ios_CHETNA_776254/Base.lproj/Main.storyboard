@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="A1_ios_CHETNA_776254" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RP6-hb-68a">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWg-3a-LXc">
+                                <rect key="frame" x="284" y="772" width="120" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="iVZ-Jm-0DX"/>
+                                    <constraint firstAttribute="width" constant="120" id="qVk-aD-1mG"/>
+                                </constraints>
+                                <state key="normal" title="VIEW ROUTE" backgroundImage="Button-Normal">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewRoute:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s40-tc-bsJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zii-9a-LPB">
+                                <rect key="frame" x="10" y="772" width="120" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="4Xg-1y-NaZ"/>
+                                    <constraint firstAttribute="height" constant="80" id="Tjx-GM-aKf"/>
+                                </constraints>
+                                <state key="normal" title="VIEW OVERLAY" backgroundImage="Button-Normal">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewOverlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c78-Pa-uWz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RP6-hb-68a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1t9-Ih-9jf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IWg-3a-LXc" secondAttribute="bottom" constant="10" id="5GV-hF-Ss7"/>
+                            <constraint firstItem="zii-9a-LPB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="MLt-nH-yFx"/>
+                            <constraint firstAttribute="bottom" secondItem="RP6-hb-68a" secondAttribute="bottom" id="Tvq-39-x88"/>
+                            <constraint firstItem="RP6-hb-68a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f30-MC-h0p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RP6-hb-68a" secondAttribute="trailing" id="iVF-4h-eh2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zii-9a-LPB" secondAttribute="bottom" constant="10" id="rca-zf-2Yb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IWg-3a-LXc" secondAttribute="trailing" constant="10" id="znq-sc-GsU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="RP6-hb-68a" id="MxG-om-evE"/>
+                        <outlet property="overlayBtn" destination="zii-9a-LPB" id="QkP-DX-AFu"/>
+                        <outlet property="routeBtn" destination="IWg-3a-LXc" id="sGl-No-ZCl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Button-Normal" width="100" height="37"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
